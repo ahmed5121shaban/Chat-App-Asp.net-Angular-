@@ -1,29 +1,32 @@
-<div class="container-fluid h-100 ps-0">
-  <div class="h-100 d-flex ps-1">
+<div class="w-100 h-100">
+  <div class="h-100 d-flex ps-0">
 
 
-  <div class="bg-light-subtle d-flex flex-column justify-content-between h-100 py-2 ps-0 ">
+  <div class="bg-light-subtle rounded-2 d-flex flex-column justify-content-between h-100 py-2 ps-0 ms-0">
 
   <div class="d-flex flex-column col-10">
-    <div class="col-2  my-1" style="border-left: 5px solid #00912e;">
-      <a class="text-decoration-none"><i class="menu-items py-2 pe-2 fa-solid fa-comment fs-4 ps-2 text-success"></i></a>
+    <div class="col-2  my-1" style="border-left: 4px solid #00912e;">
+      <a role="button" class="text-decoration-none"><i class="menu-items py-3 pe-3 fa-solid fa-comment fs-4 ps-3 text-success"></i></a>
     </div>
-    <div class="col-2 my-1" style="border-left: 5px solid #00912e;">
-      <a class="text-decoration-none"><i class="menu-items fa-regular py-2 pe-2 fa-comment fs-4 ps-2 text-success"></i></a>
+    <div class="col-2 my-1" style="border-left: 4px solid #00912e;">
+      <a role="button" class="text-decoration-none" ><i class="menu-items fa-regular py-3 pe-3 fa-comment fs-4 ps-3 text-success"></i></a>
     </div>
-    <div class="col-2 my-1" style="border-left: 5px solid #00912e;">
-      <a class="text-decoration-none"><i class="menu-items fa-regular py-2 pe-2 fa-user fs-4 ps-2 text-success"></i></a>
+    <div class="col-2 my-1" style="border-left: 4px solid #00912e;">
+      <a role="button" class="text-decoration-none"><i class="menu-items fa-regular py-3 pe-3 fa-user fs-4 ps-3 text-success"></i></a>
     </div>
-    <div class="col-2 my-1" style="border-left: 5px solid #00912e;">
-      <a class="text-decoration-none"><i class="menu-items fa-regular py-2 pe-2 fa-folder fs-4 ps-2 text-success"></i></a>
+    <div class="col-2 my-1" style="border-left: 4px solid #00912e;">
+      <a role="button" class="text-decoration-none"><i class="menu-items fa-regular py-3 pe-3 fa-folder fs-4 ps-3 text-success"></i></a>
     </div>
-    <div class="col-2 my-1" style="border-left: 5px solid #00912e;">
-      <a class="text-decoration-none"><i class="menu-items fa-solid py-2 pe-2 fa-gear fs-4 ps-2 text-success" ></i></a>
+    <div class="col-2 my-1" style="border-left: 4px solid #00912e;">
+      <a role="button" class="text-decoration-none"><i class="menu-items fa-solid py-3 pe-3 fa-gear fs-4 ps-3 text-success" ></i></a>
     </div>
   </div>
 
 <div class="col-2">
-  <i class="fa-regular fa-image fs-4 ps-3"></i>
+  <a class="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa-regular fa-image fs-4 ps-3"></i>
+  </a>
+
 </div>
 
 
@@ -31,8 +34,8 @@
 
 
 <!--Here We Put The Setting Or chat Component-->
-<div class="col-11 d-flex align-items-center">
-  <h2 class="m-auto">Message Content View : ) </h2>
+<div class="col-11 h-100">
+  <app-chat-box></app-chat-box>
 </div>
 
 

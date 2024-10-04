@@ -1,3 +1,43 @@
-<p>
-  chat-box works!
-</p>
+<div class="container-fluid h-100 ps-0 ">
+<div class="h-100 d-flex ps-0">
+
+
+<div class="bg-light-subtle d-flex flex-column col-3  h-100 py-2 px-3 ms-0" style="border-left: 2px solid #8a8a8a;">
+    <div>
+      <div><h4>Chats</h4></div>
+      <div><input class="form-control fa-search" type="search" placeholder="Search..."></div>
+    </div>
+    <hr class="mb-2">
+    <div class="overflow-y-scroll">
+    <div class="my-1">
+      <div class="d-flex justify-content-between bg-info-subtle rounded-2 p-1  align-items-center">
+        <div class="col-2">
+          <img src="https://picsum.photos/35" class="rounded-circle" alt="profile photo">
+
+        </div>
+        <div class="d-flex flex-column col-9">
+          <span class="p-0 m-0 fw-semibold" style="">name</span>
+          <span class="p-0 m-0 fw-semibold opacity-75">message</span>
+        </div>
+        <div class="d-flex flex-column col-1 pe-1 align-items-center">
+          <span class="bg-success py-1 px-1 text-light rounded-5 text-center fw-semibold" style="font-size: small;width: 31px;height: 30px;">
+            9
+          </span>
+          <span style="font-size: small;">12:30</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!--Here We Put The Setting Or chat Component-->
+<div class="col">
+  <app-message-box></app-message-box>
+</div>
+
+
+</div>
+</div>
