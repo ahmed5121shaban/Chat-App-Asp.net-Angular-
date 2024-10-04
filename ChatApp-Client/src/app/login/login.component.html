@@ -1,0 +1,92 @@
+<div class="">
+  <div class="authentication-page-content">
+      <div class="d-flex flex-column h-100 px-4 pt-4">
+          <div class="row justify-content-center my-auto">
+              <div class="col-sm-8 col-lg-6 col-xl-5 col-xxl-4">
+
+                  <div class="py-md-5 py-4">
+
+                      <div class="text-center mb-5">
+                          <h3 class="text-success fw-semibold">Welcome Back !</h3>
+                          <p class="text-muted fw-semibold">Sign in to continue to Our <span class="fw-bold text-success">CHAT.</span>
+                      </div>
+                      <form action="index.html" class="shadow p-4 rounded-2" [formGroup]="form" (ngSubmit)="submit()">
+                          <div class="mb-3">
+                              <label for="username" class="form-label">Username</label>
+                              <input formControlName="userName" name="userName" type="text" class="form-control"
+                              [class]="{'is-valid':userName.valid&&userName.dirty,
+                                   'is-invalid':userName.invalid&&userName.dirty}"
+                              id="username" placeholder="userName">
+                              <div class="invalid-feedback">
+                                @if(userName.invalid&&userName.dirty){
+                                  <span>This User Name in not Valid</span>
+                                }@else if(userName.hasError("required")){
+                                  <span>This User Name is Required</span>
+                                }
+
+                              </div>
+                              <div class="valid-feedback">
+                                @if (userName.valid&&userName.dirty) {
+                                  <span>Valid User Name</span>
+                                }
+
+                              </div>
+
+                          </div>
+
+                          <div class="mb-3">
+                              <div class="float-end">
+                                  <a href="auth-recoverpw.html" class="text-muted">Forgot password?</a>
+                              </div>
+                              <label for="userpassword" class="form-label">Password</label>
+                              <div class="position-relative auth-pass-inputgroup mb-3">
+                                  <input formControlName="password" name="password" type="password" class="form-control pe-5" placeholder="Enter Password"
+                                   [class]="{'is-valid':password.valid&&password.dirty,
+                                   'is-invalid':password.invalid&&password.dirty}"
+                                    id="password">
+                                  <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
+                                  <div class="invalid-feedback">
+                                    @if(password.hasError("pattern")&&password.dirty){
+                                      <span>This Week Password</span>
+                                    }@else if(password.hasError("required")){
+                                      <span>This Password is Required</span>
+                                    }
+
+                                  </div>
+                                  <div class="valid-feedback">
+                                    @if (password.valid&&password.dirty) {
+                                      <span>Valid Password</span>
+                                    }
+
+                                  </div>
+
+                              </div>
+
+                          </div>
+
+                          <div class="form-check form-check-info font-size-16 d-flex">
+                            <div class="col-lg-4">
+                              <input class="form-check-input" type="checkbox" id="remember-check">
+                              <label class="form-check-label font-size-14" for="remember-check">
+                                  Remember me
+                              </label>
+                            </div>
+                              <div class="text-muted col-lg-8">
+                                <a href="auth-register.html" class="fw-medium text-decoration-underline float-end"> Register</a>
+                            </div>
+                          </div>
+
+                          <div class="text-center mt-4">
+                              <button class="btn btn-success w-100 " [disabled]="form.invalid" type="submit">Log In</button>
+                          </div>
+
+                      </form><!-- end form -->
+
+
+                  </div>
+              </div><!-- end col -->
+          </div><!-- end row -->
+
+      </div>
+  </div>
+</div>
